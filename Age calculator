@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int printN(int k,int N, string A){
+    if(k<2025){
+        int yr= N-k;
+        cout<<A<<" "<<yr<<endl;
+        return 1 + printN(k+1,N+2, A);
+    }
+        else{
+            return 0;
+     }
+}
+    
+int main(){
+    cout<<"enter your name:";
+    string C;
+    cin>>C;
+    cout<<"enter your birth year:";
+    int birthyr;
+    cin>>birthyr;
+    
+    int result = printN(birthyr,birthyr+1, C);
+    cout<<result<<endl;
+    
+ return 0;   
+    
+}
